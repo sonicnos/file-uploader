@@ -1,4 +1,5 @@
 import { pinata } from "@/lib/pinata";
+import Image from "next/image";
 
 const getData = async () => {
   const url = await pinata.gateways
@@ -21,7 +22,7 @@ export const HelloRoute = async () => {
   console.log(data);
   return (
     <div>
-      <img src={data} alt="images" />
+      <Image src={data} alt="images" />
     </div>
   );
 };
